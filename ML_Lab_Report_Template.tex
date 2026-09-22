@@ -1,0 +1,226 @@
+% PCCSL 507 Machine Learning Lab - Laboratory Record
+% Converted from ML_Lab_Report_Template.docx - same structure, same content
+\documentclass[11pt]{article}
+
+% --- Page setup: US Letter, Word margins ---
+% Word: pgSz 12240x15840 twips = 8.5 x 11 in (Letter)
+% margins: top 1000 (0.69in), bottom 900 (0.625in), left/right 1080 (0.75in)
+% header/footer distance 708 twips (0.49in)
+\usepackage[paper=letterpaper,top=0.7in,bottom=0.63in,left=0.75in,right=0.75in,headheight=24pt,headsep=0.14in,footskip=0.38in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman clone (Word default font)
+\usepackage{xcolor}
+\definecolor{primary}{HTML}{1F3864}
+\definecolor{greytext}{HTML}{555555}
+\definecolor{gridgrey}{HTML}{999999}
+
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{parskip} % no paragraph indent, space between paras (like Word)
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+% --- Header / Footer (Word header1.xml / footer1.xml) ---
+\pagestyle{fancy}
+\fancyhf{}
+% Header: centered, bold, primary colour, with primary bottom rule
+\fancyhead[C]{\textcolor{primary}{\textbf{\small PCCSL 507 Machine Learning Laboratory Record}}}
+\renewcommand{\headrulewidth}{0.75pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{primary}\leaders\hrule height \headrulewidth\hfill}}
+% Footer: DEPARTMENT OF CSE ... CAPE COLLEGE ... Page No. <page>
+\fancyfoot[C]{\footnotesize DEPARTMENT OF CSE \hfill CAPE COLLEGE OF ENGINEERING ALAPPUZHA \hfill Page No. \thepage}
+\renewcommand{\footrulewidth}{0pt}
+
+% Table borders
+\arrayrulecolor{gridgrey}
+\setlength{\arrayrulewidth}{0.5pt}
+
+% Helper: section heading like Word (bold 14pt, left)
+\newcommand{\expheading}[1]{{\fontsize{14}{17}\selectfont\textbf{#1}}\par}
+% Helper: full-width underline rule (Word pBdr bottom single)
+\newcommand{\fullrule}{\noindent\rule{\textwidth}{0.6pt}\par}
+% Helper: writable line filling remaining width
+% Usage: Text: \hrulefill
+\setlength{\fboxsep}{0pt}
+
+\begin{document}
+\sloppy
+
+% ============================================================
+% COVER PAGE
+% ============================================================
+\begin{center}
+% CAPE COLLEGE OF ENGINEERING ALAPPUZHA - 15pt bold primary, space before 70pt
+\vspace*{38pt}
+{\fontsize{15}{18}\selectfont\textcolor{primary}{\textbf{CAPE COLLEGE OF ENGINEERING ALAPPUZHA}}}\par
+\vspace{10pt}
+% Department of ___ - 11pt grey
+{\fontsize{11}{14}\selectfont\textcolor{greytext}{Department of \underline{\hspace{4.5cm}}}}\par
+\vspace{28pt}
+% PCCSL 507 MACHINE LEARNING LAB - 20pt bold primary, top+bottom primary rules
+{\color{primary}\rule{\textwidth}{0.75pt}}\par
+\vspace{6pt}
+{\fontsize{20}{24}\selectfont\textcolor{primary}{\textbf{PCCSL 507 MACHINE LEARNING LAB}}}\par
+\vspace{6pt}
+{\color{primary}\rule{\textwidth}{0.75pt}}\par
+\vspace{10pt}
+% LABORATORY RECORD - 15pt bold
+{\fontsize{15}{18}\selectfont\textbf{LABORATORY RECORD}}\par
+\vspace{28pt}
+% Submitted by - 11pt
+{\fontsize{11}{14}\selectfont Submitted by}\par
+\vspace{8pt}
+\end{center}
+
+% Details block - centered table: labels, colons and write-in lines all aligned
+{\fontsize{11}{16}\selectfont
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}p{3.6cm}@{\hspace{0.2cm}:\hspace{0.3cm}}l@{}}
+Name & \underline{\hspace{6.2cm}} \\
+Reg.\ No. & \underline{\hspace{6.2cm}} \\
+Programme & \underline{\hspace{6.2cm}} \\
+Semester / Year & \underline{\hspace{6.2cm}} \\
+Academic Year & \underline{\hspace{6.2cm}} \\
+Faculty In-Charge & \underline{\hspace{6.2cm}} \\
+\end{tabular}
+\end{center}
+\vspace{14pt}
+\begin{center}
+\begin{tabular}{@{}l@{\hspace{0.2cm}:\hspace{0.3cm}}l@{\hspace{1.0cm}}l@{\hspace{0.2cm}:\hspace{0.3cm}}l@{}}
+Signature & \underline{\hspace{2.9cm}} & Date & \underline{\hspace{2.9cm}} \\
+\end{tabular}
+\end{center}
+}
+
+\newpage
+
+% ============================================================
+% INDEX
+% ============================================================
+\begin{center}
+{\fontsize{16}{19}\selectfont\textcolor{primary}{\textbf{INDEX}}}\par
+\vspace{8pt}
+\end{center}
+
+% Table: total width 7in = textwidth. Col widths from Word gridCol (dxa/1440):
+% 700=0.49in, 5300=3.68in, 1500=1.04in, 1200=0.83in, 1380=0.96in
+% scaled to fit textwidth after tabcolsep + rules
+\setlength{\tabcolsep}{4pt}
+\noindent
+\begin{tabular}{|>{\centering\arraybackslash}p{0.44in}|>{\centering\arraybackslash}p{3.34in}|>{\centering\arraybackslash}p{0.94in}|>{\centering\arraybackslash}p{0.75in}|>{\centering\arraybackslash}p{0.86in}|}
+\hline
+\rowcolor{primary}
+\textcolor{white}{\textbf{\small Sl.\ No.}} & \textcolor{white}{\textbf{\small Title of the Experiment}} & \textcolor{white}{\textbf{\small Date}} & \textcolor{white}{\textbf{\small Page No.}} & \textcolor{white}{\textbf{\small Signature}} \\
+\hline
+1  &  &  &  &  \\[14pt] \hline
+2  &  &  &  &  \\[14pt] \hline
+3  &  &  &  &  \\[14pt] \hline
+4  &  &  &  &  \\[14pt] \hline
+5  &  &  &  &  \\[14pt] \hline
+6  &  &  &  &  \\[14pt] \hline
+7  &  &  &  &  \\[14pt] \hline
+8  &  &  &  &  \\[14pt] \hline
+9  &  &  &  &  \\[14pt] \hline
+10 &  &  &  &  \\[14pt] \hline
+11 &  &  &  &  \\[14pt] \hline
+12 &  &  &  &  \\[14pt] \hline
+13 &  &  &  &  \\[14pt] \hline
+14 &  &  &  &  \\[14pt] \hline
+15 &  &  &  &  \\[14pt] \hline
+\end{tabular}
+
+\newpage
+
+% ============================================================
+% PROGRAM + OUTPUT (swapped before experiment)
+% ============================================================
+% --- PROGRAM ---
+\expheading{PROGRAM}
+\vspace{6pt}
+% Space for pasting code (17 blank paras in Word)
+\vspace{11cm}
+
+% --- OUTPUT ---
+\expheading{OUTPUT}
+\vspace{2pt}
+\noindent\rule{\textwidth}{0.5pt}\par
+% Space for pasting output
+\vspace{9cm}
+
+\newpage
+
+% ============================================================
+% EXPERIMENT TEMPLATE (replicate per experiment)
+% ============================================================
+\begin{center}
+\expheading{EXPERIMENT NO. \underline{\hspace{1.2cm}}}
+\end{center}
+\vspace{2pt}
+
+\noindent\textbf{Date:} \underline{\hspace{2.6cm}} \hfill \textbf{Page No.:} \underline{\hspace{2.6cm}}\par
+\vspace{6pt}
+
+\expheading{TITLE}
+\vspace{4pt}
+\noindent Title of the experiment: \hrulefill\par
+\vspace{4pt}
+
+% OBJECTIVE with bottom border + dashed line with bottom border (as in Word)
+\expheading{OBJECTIVE}
+\vspace{2pt}
+\fullrule
+\vspace{4pt}
+{\fontsize{14}{17}\selectfont\textbf{-----------------------------------------------------------------------------}}\par
+\vspace{2pt}
+\fullrule
+\vspace{4pt}
+
+\expheading{AIM}
+\vspace{4pt}
+\noindent To \underline{\hspace{13.8cm}}\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\vspace{4pt}
+
+\expheading{THEORY}
+\vspace{4pt}
+\noindent\underline{\hspace*{\textwidth}}\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\vspace{4pt}
+
+\expheading{PROCEDURE}
+\vspace{4pt}
+\noindent 1. \hrulefill\par
+\noindent 2. \hrulefill\par
+\noindent 3. \hrulefill\par
+\noindent 4. \hrulefill\par
+\noindent 5. \hrulefill\par
+\vspace{4pt}
+
+\expheading{DATASET DESCRIPTION}
+\vspace{4pt}
+\noindent Dataset Name: \hrulefill\par
+\noindent Source: \hrulefill\par
+\noindent Number of Samples: \underline{\hspace{2.8cm}} \hspace{0.3cm} Number of Features: \underline{\hspace{2.8cm}}\par
+\noindent Target / Class: \hrulefill\par
+\noindent Description: \hrulefill\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\noindent\underline{\hspace*{\textwidth}}\par
+\vspace{4pt}
+
+\expheading{RESULT}
+\vspace{4pt}
+{\fontsize{12}{15}\selectfont
+The above program was implemented and executed successfully using Python, and the corresponding output was obtained and verified.\ The results of the \underline{\textbf{[algorithm/model name]}} were analyzed and found to be satisfactory, thereby achieving the desired objective of the experiment.\par
+}
+
+\vspace{6pt}
+
+\noindent\textbf{Faculty Signature:} \underline{\hspace{3.6cm}} \hfill \textbf{Date:} \underline{\hspace{2.8cm}}\par
+
+\end{document}
