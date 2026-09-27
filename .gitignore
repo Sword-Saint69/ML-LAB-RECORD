@@ -1,0 +1,4 @@
+*.gz
+__pycache__/
+*.aux
+*.log

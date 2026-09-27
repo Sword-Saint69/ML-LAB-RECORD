@@ -49,6 +49,7 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - `ML_Lab_Experiment4.tex` / `.pdf` — Experiment 4 (NumPy 2D sales array). `exp4_run.py`.
 - `ML_Lab_Experiment5.tex` / `.pdf` — Experiment 5 (SLR hours vs score, predict at 9). `exp5_run.py`, `exp5_fit.png`.
 - `ML_Lab_Experiment6.tex` / `.pdf` — Experiment 6 (MLR area+age, 3D plane). `exp6_run.py`, `exp6_plane.png`.
+- `ML_Lab_Experiment7.tex` / `.pdf` — Experiment 7 (KNN Fashion MNIST, from-scratch NumPy). `exp7_run.py`, `exp7_acc.png`.
 - Pandas is allowed where the experiment needs DataFrames (Exp 3); ML model code stays NumPy-only.
 - `housing.csv` — California Housing data file. `RULES.md` — this file. `Exp4_Viva.md` — viva Q&A for Experiment 4.
 - Git commits: short and funny messages.
