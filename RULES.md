@@ -10,7 +10,7 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - Footer (all pages): `DEPARTMENT OF CSE ... CAPE COLLEGE OF ENGINEERING ALAPPUZHA ... Page No. <n>`. Experiment header shows Date only (no Page No. blank at top).
 - Cover institution line: `CAPE COLLEGE OF ENGINEERING ALAPPUZHA`.
 - Cover details (Name … Faculty In-Charge, Signature/Date): centered block, fixed-width label column, vertically aligned colons and write-in lines.
-- Index table: header row dark-blue fill + white bold text; 15 numbered rows; fill in each experiment's title + page number.
+- Index table: header row dark-blue fill + white bold text; fill each experiment's title + date + page number. Dates: 1A+1B 7/7/26, 2 15/7/26, 3A+3B 22/7/26, 4A+4B+4C 14/08/26, 5+6 9/9/26. Same dates on sheet Date lines.
 
 ## 2. Code rules (strict)
 - **No scikit-learn anywhere except Experiment 4C** (no `fetch_*`, no `train_test_split`, no metrics elsewhere). NumPy + stdlib only; `matplotlib` allowed for plots.
@@ -51,6 +51,7 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - `ML_Lab_Experiment5.tex` / `.pdf` — Experiment 5 (SLR hours vs score, predict at 9). `exp5_run.py`, `exp5_fit.png`.
 - `ML_Lab_Experiment6.tex` / `.pdf` — Experiment 6 (MLR area+age, 3D plane). `exp6_run.py`, `exp6_plane.png`.
 - `ML_Lab_Experiment7.tex` / `.pdf` — Experiment 7 (KNN Fashion MNIST, from-scratch NumPy). `exp7_run.py`, `exp7_acc.png`.
+- `OPWER.tex` / `.pdf` — joined record, big code font, PCCSL 508 header, code+output LEFT (10 exps: 1A,1B,2,3A,3B,4A,4B,4C,5,6). `exp5_knn_run.py`, `exp5_knn_acc.png`, `exp6_tree_run.py`, `exp6_tree.png`, `exp6_imp.png`.
 - Pandas is allowed where the experiment needs DataFrames (Exp 3); ML model code stays NumPy-only.
 - `housing.csv` — California Housing data file. `RULES.md` — this file. `Exp4_Viva.md` — viva Q&A for Experiment 4.
 - Git commits: short and funny messages.

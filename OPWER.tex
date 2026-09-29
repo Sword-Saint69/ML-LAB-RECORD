@@ -98,16 +98,16 @@ Signature & \underline{\hspace{2.9cm}} & Date & \underline{\hspace{2.9cm}} \\
 \rowcolor{primary}
 \textcolor{white}{\textbf{\small Sl.\ No.}} & \textcolor{white}{\textbf{\small Title of the Experiment}} & \textcolor{white}{\textbf{\small Date}} & \textcolor{white}{\textbf{\small Page No.}} & \textcolor{white}{\textbf{\small Signature}} \\
 \hline
-1A & NumPy Basics -- Student Marks Analysis & & 5 & \\[14pt] \hline
-1B & Pandas DataFrame -- Student Details & & 11 & \\[14pt] \hline
-2 & NumPy 2D Array -- Branch Sales Analysis & & 17 & \\[14pt] \hline
-3A & Simple Linear Regression -- Study Hours & & 23 & \\[14pt] \hline
-3B & Multiple Linear Regression -- House Price & & 29 & \\[14pt] \hline
-4A & Simple Linear Regression (Least Squares) & & 35 & \\[14pt] \hline
-4B & Simple Linear Regression (Gradient Descent) & & 41 & \\[14pt] \hline
-4C & Simple Linear Regression with Scikit-learn & & 49 & \\[14pt] \hline
-9  &  &  &  &  \\[14pt] \hline
-10 &  &  &  &  \\[14pt] \hline
+1A & NumPy Basics -- Student Marks Analysis & 7/7/26 & 5 & \\[14pt] \hline
+1B & Pandas DataFrame -- Student Details & 7/7/26 & 11 & \\[14pt] \hline
+2 & NumPy 2D Array -- Branch Sales Analysis & 15/7/26 & 17 & \\[14pt] \hline
+3A & Simple Linear Regression -- Study Hours & 22/7/26 & 25 & \\[14pt] \hline
+3B & Multiple Linear Regression -- House Price & 22/7/26 & 31 & \\[14pt] \hline
+4A & Simple Linear Regression (Least Squares) & 14/08/26 & 37 & \\[14pt] \hline
+4B & Simple Linear Regression (Gradient Descent) & 14/08/26 & 43 & \\[14pt] \hline
+4C & Simple Linear Regression with Scikit-learn & 14/08/26 & 53 & \\[14pt] \hline
+5 & K-Nearest Neighbors on Breast Cancer & 9/9/26 & 59 & \\[14pt] \hline
+6 & Decision Tree on Online Retail & 9/9/26 & 65 & \\[14pt] \hline
 11 &  &  &  &  \\[14pt] \hline
 12 &  &  &  &  \\[14pt] \hline
 13 &  &  &  &  \\[14pt] \hline
@@ -126,7 +126,7 @@ Signature & \underline{\hspace{2.9cm}} & Date & \underline{\hspace{2.9cm}} \\
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 7/7/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -252,7 +252,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 7/7/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -419,7 +419,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 15/7/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -508,6 +508,13 @@ print("Day-wise total =", sales.sum(axis=0))
 
 top = int(sales.sum(axis=1).argmax())
 print("Highest sales: branch", top + 1)
+\end{lstlisting}
+
+\toevenpage
+\expheading{PROGRAM (continued)}
+\vspace{6pt}
+
+\begin{lstlisting}
 x = np.arange(len(days))
 w = 0.25
 plt.figure(figsize=(7, 4.5))
@@ -592,7 +599,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 22/7/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -733,7 +740,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 22/7/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -871,7 +878,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 14/08/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -1014,7 +1021,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 14/08/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -1116,6 +1123,13 @@ for epoch in range(100):
     db = (-2 / n) * err.sum()
     m = m - 0.01 * dm
     b = b - 0.01 * db
+\end{lstlisting}
+
+\toevenpage
+\expheading{PROGRAM (continued)}
+\vspace{6pt}
+
+\begin{lstlisting}
 m_gd = m / sg
 b_gd = b - m * mu / sg
 print(f"GD slope m = {m_gd:.6f}")
@@ -1176,7 +1190,7 @@ The above program was implemented and executed successfully using Python, and th
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} 14/08/26\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -1297,4 +1311,312 @@ The above program was implemented and executed successfully using Python, and th
 
 \noindent\textbf{Faculty Signature:} \underline{\hspace{3.6cm}} \hfill \textbf{Date:} \underline{\hspace{2.8cm}}\par
 
+\tooddpage
+
+% ============================================================
+% EXPERIMENT 5
+% ============================================================
+{\setlength{\parskip}{1pt}\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+\begin{center}
+\expheading{EXPERIMENT NO. 5}
+\end{center}
+\vspace{2pt}
+
+\noindent\textbf{Date:} 9/9/26\par
+\vspace{6pt}
+
+\expheading{TITLE}
+\vspace{4pt}
+\noindent K-Nearest Neighbors Classification on Breast Cancer Dataset\par
+\vspace{4pt}
+
+\expheading{AIM}
+\vspace{4pt}
+\noindent To classify tumors with K-Nearest Neighbors for $K=3,5,7,9$ and compare precision, recall, F1-score and accuracy. \par
+\vspace{4pt}
+
+\expheading{OBJECTIVE}
+\vspace{2pt}
+\fullrule
+\vspace{4pt}
+\noindent To implement K-Nearest Neighbors for binary classification on the Breast Cancer dataset, evaluate K=3,5,7,9 with a comparison table and confusion matrix, and plot accuracy versus K. \par
+\vspace{4pt}
+
+\expheading{THEORY}
+\vspace{4pt}
+Majority vote of the $K$ neighbours:
+\[\hat{y}=\arg\max_c\sum_{i\in N_K(x)}[y_i=c]\]
+Euclidean distance:
+\[d(x,z)=\sqrt{\sum_{j=1}^{30}(x_j-z_j)^2}\]
+Binary metrics with TP, TN, FP, FN:
+\[\text{Acc}=\frac{TP+TN}{TP+TN+FP+FN}\qquad \text{Prec}=\frac{TP}{TP+FP}\qquad \text{Rec}=\frac{TP}{TP+FN}\qquad F_1=2\frac{\text{Prec}\cdot\text{Rec}}{\text{Prec}+\text{Rec}}\]
+\vspace{4pt}
+
+\expheading{PROCEDURE}
+\vspace{4pt}
+\noindent 1. Import NumPy, Pandas, Matplotlib and sklearn (datasets, model\_selection, neighbors, metrics).\par
+\noindent 2. Load the Breast Cancer dataset with load\_breast\_cancer(); separate 30 features $X$ and binary target $Y$.\par
+\noindent 3. Split 80/20 (random\_state=42).\par
+\noindent 4. Create KNeighborsClassifier with Euclidean distance ($p=2$), starting $K=3$.\par
+\noindent 5. Train the model; predict the test samples.\par
+\noindent 6. Compute accuracy, precision, recall, F1-score and confusion matrix.\par
+\noindent 7. Repeat for $K=3,5,7,9$; display the comparison table.\par
+\noindent 8. Plot accuracy versus $K$ ($K$ on X-axis, accuracy on Y-axis). \par
+\vspace{4pt}
+
+\expheading{DATASET DESCRIPTION}
+\vspace{4pt}
+\noindent Dataset Name: Breast Cancer Wisconsin (load\_breast\_cancer)\par
+\noindent Source: 569 samples; 30 numerical features\par
+\noindent Number of Samples: 455 train / 114 test \hspace{0.3cm} Number of Features: 30\par
+\noindent Target / Class: binary (malignant/benign)\par
+\noindent Description: 80/20 split, random\_state=42; Euclidean distance. \par
+\vspace{4pt}
+} % end sheet-local tightening
+\toevenpage
+\expheading{PROGRAM}
+\vspace{6pt}
+
+\begin{lstlisting}
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
+data = load_breast_cancer()
+X = pd.DataFrame(data.data, columns=data.feature_names)
+y = pd.Series(data.target)
+print("Samples:", X.shape, "Classes:", data.target_names.tolist())
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print("Train:", len(X_train), " Test:", len(X_test))
+print("K  acc prec rec f1")
+cm_best, best_a, best_k, acc = None, -1.0, 0, []
+for K in [3, 5, 7, 9]:
+    model = KNeighborsClassifier(n_neighbors=K, p=2)
+    model.fit(X_train, y_train)
+    p = model.predict(X_test)
+    a = accuracy_score(y_test, p)
+    acc.append(a)
+    print(f"{K}  {a:.4f} {precision_score(y_test, p):.4f} {recall_score(y_test, p):.4f} {f1_score(y_test, p):.4f}")
+    if a > best_a:
+        best_a, best_k = a, K
+        cm_best = confusion_matrix(y_test, p)
+print("Confusion matrix at best K:")
+print(cm_best)
+print(f"Best K = {best_k}")
+plt.figure(figsize=(7, 4.5))
+plt.plot([3, 5, 7, 9], acc, marker="o", linewidth=2)
+plt.xlabel("K")
+plt.ylabel("Test accuracy")
+plt.title("KNN on Breast Cancer: Accuracy vs K")
+plt.grid(True)
+plt.tight_layout()
+plt.savefig("exp5_knn_acc.png", dpi=150)
+\end{lstlisting}
+\toevenpage
+\expheading{OUTPUT}
+\vspace{2pt}
+\noindent\rule{\textwidth}{0.5pt}\par
+\vspace{4pt}
+\begin{verbatim}
+Samples: (569, 30) Classes: ['malignant', 'benign']
+Train: 455  Test: 114
+K  acc prec rec f1
+3  0.9298 0.9315 0.9577 0.9444
+5  0.9561 0.9342 1.0000 0.9660
+7  0.9561 0.9459 0.9859 0.9655
+9  0.9561 0.9459 0.9859 0.9655
+Confusion matrix at best K:
+[[38  5]
+ [ 0 71]]
+Best K = 5
+\end{verbatim}
+\vspace{4pt}
+
+\begin{center}
+\includegraphics[width=0.78\textwidth]{exp5_knn_acc.png}\par
+\small Fig. 1: Test accuracy vs $K$ (best $K=5$).\par
+\end{center}
+\vspace{4pt}
+
+\tooddpage
+\expheading{RESULT}
+\vspace{4pt}
+{\fontsize{12}{15}\selectfont
+The above program was implemented and executed successfully using Python, and the corresponding output was obtained and verified. The results of the \textbf{K-Nearest Neighbors classifier} were analyzed and found to be satisfactory, thereby achieving the desired objective of the experiment.\par
+}
+
+\vspace{12pt}
+
+\noindent\textbf{Faculty Signature:} \underline{\hspace{3.6cm}} \hfill \textbf{Date:} \underline{\hspace{2.8cm}}\par
+
+\tooddpage
+
+% ============================================================
+% EXPERIMENT 6
+% ============================================================
+{\setlength{\parskip}{1pt}\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}
+\begin{center}
+\expheading{EXPERIMENT NO. 6}
+\end{center}
+\vspace{2pt}
+
+\noindent\textbf{Date:} 9/9/26\par
+\vspace{6pt}
+
+\expheading{TITLE}
+\vspace{4pt}
+\noindent Customer Segmentation using Decision Tree\par
+\vspace{4pt}
+
+\expheading{AIM}
+\vspace{4pt}
+\noindent Customer Segmentation using a Decision Tree classifier on the Online Retail Dataset. \par
+\vspace{4pt}
+
+\expheading{OBJECTIVE}
+\vspace{2pt}
+\fullrule
+\vspace{4pt}
+\noindent To segment customers with a Decision Tree classifier (entropy criterion) on Online Retail data, visualize the tree, analyze feature importance, and discuss how the structure explains purchasing behavior. \par
+\vspace{4pt}
+
+\expheading{THEORY}
+\vspace{4pt}
+Entropy of a node:
+\[H(S)=-\sum_c p_c\log_2 p_c\]
+Information gain of a split:
+\[G(S,f)=H(S)-\sum_v\frac{|S_v|}{|S|}H(S_v)\]
+The tree splits on $x_j \le t$ with maximum gain (max depth 3); feature importance is the normalized total gain decrease.
+\vspace{4pt}
+
+\expheading{PROCEDURE}
+\vspace{4pt}
+\noindent 1. Load the Online Retail dataset (UCI).\par
+\noindent 2. Clean data (drop missing CustomerID; keep Quantity$>0$, UnitPrice$>0$).\par
+\noindent 3. Create per-customer features (Recency, Frequency, Monetary, AvgBasket, Items).\par
+\noindent 4. Define target (Monetary terciles); 80/20 split (random\_state=42).\par
+\noindent 5. Fit DecisionTreeClassifier (entropy, max depth 3).\par
+\noindent 6. Visualize the tree with plot\_tree.\par
+\noindent 7. Analyze feature importance. \par
+\vspace{4pt}
+
+\expheading{DATASET DESCRIPTION}
+\vspace{4pt}
+\noindent Dataset Name: Online Retail (UCI, online\_retail.zip)\par
+\noindent Source: 541909 rows $\rightarrow$ 397884 clean $\rightarrow$ 4338 customers\par
+\noindent Number of Samples: 3470 train / 868 test \hspace{0.3cm} Number of Features: 4\par
+\noindent Target / Class: value segment (0/1/2)\par
+\noindent Description: seed 42 via random\_state; depth 3. \par
+\vspace{4pt}
+} % end sheet-local tightening
+\toevenpage
+\expheading{PROGRAM}
+\vspace{6pt}
+
+\begin{lstlisting}
+import os
+import urllib.request
+import zipfile
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import accuracy_score
+ZP = "online_retail.zip"
+if not os.path.exists(ZP):
+    print("Downloading Online Retail")
+    urllib.request.urlretrieve("https://archive.ics.uci.edu/static/public/352/online+retail.zip", ZP)
+with zipfile.ZipFile(ZP) as z:
+    name = [n for n in z.namelist() if n.endswith(".xlsx")][0]
+    df = pd.read_excel(z.open(name), engine="openpyxl")
+print("Rows:", len(df))
+df = df.dropna(subset=["CustomerID"])
+df = df[(df["Quantity"] > 0) & (df["UnitPrice"] > 0)]
+print("Clean rows:", len(df))
+df["Total"] = df["Quantity"] * df["UnitPrice"]
+maxd = df["InvoiceDate"].max()
+g = df.groupby("CustomerID")
+cust = pd.DataFrame({
+    "Recency": (maxd - g["InvoiceDate"].max()).dt.days,
+    "Frequency": g["InvoiceNo"].nunique(),
+    "Monetary": g["Total"].sum(),
+    "AvgBasket": g["Total"].mean(),
+    "Items": g["StockCode"].nunique(),
+})
+print("Customers:", len(cust))
+m = cust["Monetary"].values
+y = np.where(m <= np.percentile(m, 33.3), 0, np.where(m <= np.percentile(m, 66.7), 1, 2))
+X = cust[["Recency", "Frequency", "AvgBasket", "Items"]]
+print("Classes:", np.bincount(y).tolist())
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print("Train:", len(X_train), " Test:", len(X_test))
+\end{lstlisting}
+
+\toevenpage
+\expheading{PROGRAM (continued)}
+\vspace{6pt}
+
+\begin{lstlisting}
+model = DecisionTreeClassifier(criterion="entropy", max_depth=3, random_state=42)
+model.fit(X_train, y_train)
+p = model.predict(X_test)
+print(f"DecisionTree: acc={accuracy_score(y_test, p):.4f} depth={model.get_depth()} leaves={model.get_n_leaves()}")
+print("Importance:", " ".join(f"{f}={v:.3f}" for f, v in zip(X.columns, model.feature_importances_)))
+plt.figure(figsize=(12, 7))
+plot_tree(model, feature_names=list(X.columns), class_names=["Low", "Mid", "High"], filled=True, rounded=True, fontsize=8)
+plt.title("Decision Tree (entropy) for Customer Segments")
+plt.tight_layout()
+plt.savefig("exp6_tree.png", dpi=150)
+plt.figure(figsize=(7, 4))
+plt.barh(list(X.columns), model.feature_importances_)
+plt.xlabel("Importance")
+plt.title("Decision Tree Feature Importance")
+plt.tight_layout()
+plt.savefig("exp6_imp.png", dpi=150)
+\end{lstlisting}
+\toevenpage
+\expheading{OUTPUT}
+\vspace{2pt}
+\noindent\rule{\textwidth}{0.5pt}\par
+\vspace{4pt}
+\begin{verbatim}
+Rows: 541909
+Clean rows: 397884
+Customers: 4338
+Classes: [1445, 1448, 1445]
+Train: 3470  Test: 868
+DecisionTree: acc=0.7131 depth=3 leaves=8
+Importance: Recency=0.000 Frequency=0.584 AvgBasket=0.213 Items=0.203
+\end{verbatim}
+\vspace{4pt}
+
+\begin{center}
+\includegraphics[width=0.90\textwidth]{exp6_tree.png}\par
+\small Fig. 1: Decision tree (Frequency root, depth 3).\par
+\vspace{6pt}
+\includegraphics[width=0.62\textwidth]{exp6_imp.png}\par
+\small Fig. 2: Feature importance (Frequency leads).\par
+\end{center}
+\vspace{4pt}
+
+\tooddpage
+\expheading{RESULT}
+\vspace{4pt}
+{\fontsize{12}{15}\selectfont
+The above program was implemented and executed successfully using Python, and the corresponding output was obtained and verified. The results of the \textbf{Decision Tree classifier} were analyzed and found to be satisfactory, thereby achieving the desired objective of the experiment.\par
+}
+
+\vspace{12pt}
+
+\noindent\textbf{Faculty Signature:} \underline{\hspace{3.6cm}} \hfill \textbf{Date:} \underline{\hspace{2.8cm}}\par
+
 \end{document}
+

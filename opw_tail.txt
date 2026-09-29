@@ -1,0 +1,240 @@
+PCCSL 508 Machine Learning Laboratory Record
+
+OUTPUT
+Shape: (20640, 8)
+Missing: 0
+Train: 16512 Test: 4128
+m = 0.076756 b = 1.6548
+MSE=1.2923 R2=0.0138 RMSE=1.1368
+
+Fig. 1: Test data with the Scikit-learn regression line.
+
+DEPARTMENT OF CSE
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 56
+
+PCCSL 508 Machine Learning Laboratory Record
+
+RESULT
+The above program was implemented and executed successfully using Python, and the corresponding
+output was obtained and verified. The results of the Scikit-learn LinearRegression model were analyzed
+and found to be satisfactory, thereby achieving the desired objective of the experiment.
+Faculty Signature:
+
+Date:
+
+EXPERIMENT NO. 5
+Date:
+
+TITLE
+K-Nearest Neighbors Classification on Breast Cancer Dataset
+
+AIM
+To classify tumors with K-Nearest Neighbors for K = 3, 5, 7, 9 and compare precision, recall, F1-score and accuracy.
+
+OBJECTIVE
+To implement K-Nearest Neighbors for binary classification on the Breast Cancer dataset, evaluate K=3,5,7,9 with
+a comparison table and confusion matrix, and plot accuracy versus K.
+
+THEORY
+Majority vote of the K neighbours:
+ŷ = arg max
+c
+
+Euclidean distance:
+
+∑ [yi = c]
+i∈NK (x)
+
+v
+u 30
+u
+d(x, z) = t ∑ (x j − z j )2
+j=1
+
+Binary metrics with TP, TN, FP, FN:
+TP+TN
+Acc =
+T P + T N + FP + FN
+
+Prec =
+
+TP
+T P + FP
+
+Rec =
+
+TP
+T P + FN
+
+F1 = 2
+
+Prec · Rec
+Prec + Rec
+
+PROCEDURE
+1. Import NumPy, Pandas, Matplotlib and sklearn (datasets, model_selection, neighbors, metrics).
+2. Load the Breast Cancer dataset with load_breast_cancer(); separate 30 features X and binary target Y .
+3. Split 80/20 (random_state=42).
+4. Create KNeighborsClassifier with Euclidean distance (p = 2), starting K = 3.
+5. Train the model; predict the test samples.
+6. Compute accuracy, precision, recall, F1-score and confusion matrix.
+7. Repeat for K = 3, 5, 7, 9; display the comparison table.
+8. Plot accuracy versus K (K on X-axis, accuracy on Y-axis).
+
+DATASET DESCRIPTION
+Dataset Name: Breast Cancer Wisconsin (load_breast_cancer)
+Source: 569 samples; 30 numerical features
+Number of Samples: 455 train / 114 test Number of Features: 30
+Target / Class: binary (malignant/benign)
+Description: 80/20 split, random_state=42; Euclidean distance.
+DEPARTMENT OF CSE
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 57
+
+PCCSL 508 Machine Learning Laboratory Record
+
+PROGRAM
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib . use (" Agg ")
+import matplotlib . pyplot as plt
+from sklearn . datasets import load_breast_cancer
+from sklearn . model_selection import train_test_split
+from sklearn . neighbors import KNeighborsClassifier
+from sklearn . metrics import accuracy_score , precision_score ,
+recall_score , f1_score , confusion_matrix
+data = load_breast_cancer ()
+X = pd . DataFrame ( data . data , columns = data . feature_names )
+y = pd . Series ( data . target )
+print (" Samples :" , X . shape , " Classes :" , data . target_names . tolist () )
+X_train , X_test , y_train , y_test = train_test_split (X , y , test_size
+=0.2 , random_state =42)
+print (" Train :" , len ( X_train ) , " Test :" , len ( X_test ) )
+print (" K acc prec rec f1 ")
+cm_best , best_a , best_k , acc = None , -1.0 , 0 , []
+for K in [3 , 5 , 7 , 9]:
+model = KNeighborsClassifier ( n_neighbors =K , p =2)
+model . fit ( X_train , y_train )
+p = model . predict ( X_test )
+a = accuracy_score ( y_test , p )
+acc . append ( a )
+print ( f "{ K } { a :.4 f } { precision_score ( y_test , p ) :.4 f } {
+recall_score ( y_test , p ) :.4 f } { f1_score ( y_test , p ) :.4 f }")
+if a > best_a :
+best_a , best_k = a , K
+cm_best = confusion_matrix ( y_test , p )
+print (" Confusion matrix at best K :")
+print ( cm_best )
+print ( f " Best K = { best_k }")
+plt . figure ( figsize =(7 , 4.5) )
+plt . plot ([3 , 5 , 7 , 9] , acc , marker =" o " , linewidth =2)
+plt . xlabel (" K ")
+plt . ylabel (" Test accuracy ")
+plt . title (" KNN on Breast Cancer : Accuracy vs K ")
+plt . grid ( True )
+plt . tight_layout ()
+plt . savefig (" exp5_knn_acc . png " , dpi =150)
+
+DEPARTMENT OF CSE
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 58
+
+PCCSL 508 Machine Learning Laboratory Record
+
+OUTPUT
+Samples: (569, 30) Classes: ['malignant', 'benign']
+Train: 455 Test: 114
+K acc prec rec f1
+3 0.9298 0.9315 0.9577 0.9444
+5 0.9561 0.9342 1.0000 0.9660
+7 0.9561 0.9459 0.9859 0.9655
+9 0.9561 0.9459 0.9859 0.9655
+Confusion matrix at best K:
+[[38 5]
+[ 0 71]]
+Best K = 5
+
+Fig. 1: Test accuracy vs K (best K = 5).
+
+DEPARTMENT OF CSE
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 60
+
+PCCSL 508 Machine Learning Laboratory Record
+
+RESULT
+The above program was implemented and executed successfully using Python, and the corresponding
+output was obtained and verified. The results of the K-Nearest Neighbors classifier were analyzed and
+found to be satisfactory, thereby achieving the desired objective of the experiment.
+Faculty Signature:
+
+DEPARTMENT OF CSE
+
+Date:
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 61
+
+PCCSL 508 Machine Learning Laboratory Record
+
+EXPERIMENT NO. 6
+Date:
+
+TITLE
+Customer Segmentation using Decision Tree
+
+AIM
+Customer Segmentation using a Decision Tree classifier on the Online Retail Dataset.
+
+OBJECTIVE
+To segment customers with a Decision Tree classifier (entropy criterion) on Online Retail data, visualize the tree,
+analyze feature importance, and discuss how the structure explains purchasing behavior.
+
+THEORY
+Entropy of a node:
+H(S) = − ∑ pc log2 pc
+c
+
+Information gain of a split:
+|Sv |
+H(Sv )
+v |S|
+
+G(S, f ) = H(S) − ∑
+
+The tree splits on x j ≤ t with maximum gain (max depth 3); feature importance is the normalized total gain decrease.
+
+PROCEDURE
+1. Load the Online Retail dataset (UCI).
+2. Clean data (drop missing CustomerID; keep Quantity> 0, UnitPrice> 0).
+3. Create per-customer features (Recency, Frequency, Monetary, AvgBasket, Items).
+4. Define target (Monetary terciles); 80/20 split (random_state=42).
+5. Fit DecisionTreeClassifier (entropy, max depth 3).
+6. Visualize the tree with plot_tree.
+7. Analyze feature importance.
+
+DATASET DESCRIPTION
+Dataset Name: Online Retail (UCI, online_retail.zip)
+Source: 541909 rows → 397884 clean → 4338 customers
+Number of Samples: 3470 train / 868 test Number of Features: 4
+Target / Class: value segment (0/1/2)
+Description: seed 42 via random_state; depth 3.
+
+DEPARTMENT OF CSE
+
+CAPE COLLEGE OF ENGINEERING ALAPPUZHA
+
+Page No. 63
+
+
