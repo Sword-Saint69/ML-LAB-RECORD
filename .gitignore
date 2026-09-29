@@ -1,4 +1,11 @@
 *.gz
+online_retail.zip
 __pycache__/
 *.aux
 *.log
+opw*.txt
+full.txt
+*_test.txt
+audit*.py
+synmap.py
+pgcheck*.py
