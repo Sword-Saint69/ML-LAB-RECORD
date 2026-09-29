@@ -7,7 +7,7 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - Font: Times clone (`mathptmx`), 11pt base. Section headings: bold 14pt, **left-aligned** (template style). No `Title of the experiment:` prefix — bare title text only. Never use short forms SLR/MLR — always Simple/Multiple Linear Regression.
 - Colors: primary `#1F3864`, grey text `#555555`, table grid `#999999`.
 - Header (all pages): `PCCSL 507 Machine Learning Laboratory Record`, bold primary, primary bottom rule.
-- Footer (all pages): `DEPARTMENT OF CSE ... CAPE COLLEGE OF ENGINEERING ALAPPUZHA ... Page No. <n>`.
+- Footer (all pages): `DEPARTMENT OF CSE ... CAPE COLLEGE OF ENGINEERING ALAPPUZHA ... Page No. <n>`. Experiment header shows Date only (no Page No. blank at top).
 - Cover institution line: `CAPE COLLEGE OF ENGINEERING ALAPPUZHA`.
 - Cover details (Name … Faculty In-Charge, Signature/Date): centered block, fixed-width label column, vertically aligned colons and write-in lines.
 - Index table: header row dark-blue fill + white bold text; 15 numbered rows; fill in each experiment's title + page number.
@@ -23,11 +23,11 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - Code style: simple, beginner-readable, faculty notation (`m`, `b`), plain statements with no comments.
 
 ## 3. Section content rules (Experiment 1 pattern)
-- TITLE: short, filled in. OBJECTIVE: filled in (2–3 lines). AIM: short (1–2 lines).
+- TITLE: short, filled in. AIM first, then OBJECTIVE (2–3 lines each).
 - THEORY: equations only (regression equation, LS estimates, MSE cost, gradients, updates, MSE/R²).
 - PROCEDURE: faculty style — Part A least squares steps + Part B gradient-descent steps.
 - DATASET DESCRIPTION: real counts (usable/missing/duplicates/invalid, train/test sizes, feature, target).
-- PROGRAM: full listing, must match its `.py` file exactly. OUTPUT: real console output + plots (sales exp has bar + pie side by side). RESULT: always the exact template sentence with the model-name blank filled in **bold, no underline**.
+- PROGRAM: full listing, must match its `.py` file exactly. OUTPUT: real console output + plots (sales exp has bar/pie/line/scatter in a 2x2 grid). RESULT: always the exact template sentence with the model-name blank filled in **bold, no underline**.
 - Exp 4A/4B/4C use the full faculty procedures (least-squares B–I, gradient-descent 1–14, sklearn 1–6).
 
 ## 4. Double-side printing layout
@@ -40,6 +40,7 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 
 ## 5. Files (in `ML LAB` folder)
 - `ML_Lab_Record.tex` / `.pdf` — the joined record (cover, index, all 6 experiments, one PDF).
+- `OPWER.tex` / `.pdf` — big-code-font variant of the joined record (PCCSL 508 header; code AND output on left pages).
 - Joined order: 1A marks, 1B dataframe, 2 sales (+bar+pie charts), 3A hours-score, 3B MLR, 4A LS, 4B GD, 4C sklearn. Index page numbers must match section starts; verify with `pdftotext` after every compile.
 - `ML_Lab_Experiment1.tex` / `.pdf` — full record: cover, index, experiment.
 - `ML_Lab_Report_Template.tex` — blank template (program/output pages before experiment sheet).

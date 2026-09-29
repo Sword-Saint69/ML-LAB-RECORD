@@ -43,7 +43,7 @@
 \end{center}
 \vspace{2pt}
 
-\noindent\textbf{Date:} \underline{\hspace{2.6cm}} \hfill \textbf{Page No.:} \underline{\hspace{2.6cm}}\par
+\noindent\textbf{Date:} \underline{\hspace{2.6cm}}\par
 \vspace{6pt}
 
 \expheading{TITLE}
@@ -51,16 +51,16 @@
 \noindent NumPy 2D Array -- Branch Sales Analysis\par
 \vspace{4pt}
 
+\expheading{AIM}
+\vspace{4pt}
+\noindent To store sales data in a 2D array and compute branch/day-wise totals, averages and the highest-selling branch using NumPy. \par
+\vspace{4pt}
+
 \expheading{OBJECTIVE}
 \vspace{2pt}
 \fullrule
 \vspace{4pt}
 \noindent To use a 2D NumPy array for branch sales data and perform indexing, slicing and visualization to find weekly totals, branch averages, day-wise totals and the top branch. \par
-\vspace{4pt}
-
-\expheading{AIM}
-\vspace{4pt}
-\noindent To store sales data in a 2D array and compute branch/day-wise totals, averages and the highest-selling branch using NumPy. \par
 \vspace{4pt}
 
 \expheading{THEORY}
@@ -82,7 +82,7 @@ Top branch:
 \noindent 1. Store the sales data of 3 branches over 7 days in a 2D NumPy array and display it.\par
 \noindent 2. Display the 1st branch sales, Mon--Wed sales and 2nd-branch sales from Thursday.\par
 \noindent 3. Find weekly total per branch, grand total, branch-wise average and day-wise total.\par
-\noindent 4. Find the branch with the highest sales, display all results and plot the daily-sales bar and pie charts. \par
+\noindent 4. Find the branch with the highest sales, display all results and plot the daily-sales bar, pie, line and scatter charts. \par
 \vspace{4pt}
 
 \expheading{DATASET DESCRIPTION}
@@ -139,17 +139,25 @@ plt.bar(x - w, sales[0], width=w, label="Branch 1")
 plt.bar(x, sales[1], width=w, label="Branch 2")
 plt.bar(x + w, sales[2], width=w, label="Branch 3")
 plt.xticks(x, days)
-plt.xlabel("Day")
-plt.ylabel("Sales")
-plt.title("Daily Sales per Branch")
-plt.legend()
-plt.tight_layout()
-plt.savefig("exp4_sales.png", dpi=150)
+plt.xlabel("Day"); plt.ylabel("Sales"); plt.title("Daily Sales per Branch")
+plt.legend(); plt.tight_layout(); plt.savefig("exp4_sales.png", dpi=150)
 plt.figure(figsize=(5, 4))
-plt.pie(sales.sum(axis=1), labels=["Branch 1", "Branch 2", "Branch 3"], autopct="%1.1f%%")
-plt.title("Branch Share of Total Sales")
-plt.tight_layout()
+L = ["Branch 1", "Branch 2", "Branch 3"]
+plt.pie(sales.sum(axis=1), labels=L, autopct="%1.1f%%")
+plt.title("Branch Share of Total Sales"); plt.tight_layout()
 plt.savefig("exp4_pie.png", dpi=150)
+plt.figure(figsize=(7, 4.5))
+plt.plot(days, sales.sum(axis=0), marker="o", linewidth=2)
+plt.xlabel("Day"); plt.ylabel("Total sales")
+plt.title("Day-wise Total Sales Trend")
+plt.tight_layout(); plt.savefig("exp4_line.png", dpi=150)
+plt.figure(figsize=(7, 4.5))
+plt.scatter(range(7), sales[0], s=40, label="Branch 1")
+plt.scatter(range(7), sales[1], s=40, label="Branch 2")
+plt.scatter(range(7), sales[2], s=40, label="Branch 3")
+plt.xlabel("Day index"); plt.ylabel("Sales"); plt.title("Daily Sales Scatter per Branch")
+plt.legend(); plt.tight_layout(); plt.savefig("exp4_scatter.png", dpi=150)
+print("saved exp4_sales.png exp4_pie.png exp4_line.png exp4_scatter.png")
 \end{lstlisting}
 
 \newpage
@@ -177,8 +185,12 @@ Highest sales: branch 3
 \vspace{4pt}
 
 \begin{center}
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{exp4_sales.png}\par{\small Fig. 1: Daily sales per branch.}\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{exp4_pie.png}\par{\small Fig. 2: Branch share of total sales.}\end{minipage}
+\begin{minipage}{0.40\textwidth}\centering\includegraphics[width=\textwidth]{exp4_sales.png}\par{\small Fig. 1: Daily sales per branch.}\end{minipage}\hfill
+\begin{minipage}{0.40\textwidth}\centering\includegraphics[width=\textwidth]{exp4_pie.png}\par{\small Fig. 2: Branch share of total sales.}\end{minipage}
+
+\vspace{4pt}
+\begin{minipage}{0.40\textwidth}\centering\includegraphics[width=\textwidth]{exp4_line.png}\par{\small Fig. 3: Day-wise total sales trend.}\end{minipage}\hfill
+\begin{minipage}{0.40\textwidth}\centering\includegraphics[width=\textwidth]{exp4_scatter.png}\par{\small Fig. 4: Daily sales scatter per branch.}\end{minipage}
 \end{center}
 \vspace{4pt}
 

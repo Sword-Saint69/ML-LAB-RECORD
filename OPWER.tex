@@ -23,11 +23,11 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{listings}
-\lstset{basicstyle=\footnotesize\ttfamily, breaklines=true, frame=single, showstringspaces=false}
+\lstset{basicstyle=\large\ttfamily, breaklines=true, frame=single, showstringspaces=false}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\textcolor{primary}{\textbf{\small PCCSL 507 Machine Learning Laboratory Record}}}
+\fancyhead[C]{\textcolor{primary}{\textbf{\small PCCSL 508 Machine Learning Laboratory Record}}}
 \renewcommand{\headrulewidth}{0.75pt}
 \renewcommand{\headrule}{\hbox to\headwidth{\color{primary}\leaders\hrule height \headrulewidth\hfill}}
 \fancyfoot[C]{\footnotesize DEPARTMENT OF CSE \hfill CAPE COLLEGE OF ENGINEERING ALAPPUZHA \hfill Page No. \thepage}
@@ -99,13 +99,13 @@ Signature & \underline{\hspace{2.9cm}} & Date & \underline{\hspace{2.9cm}} \\
 \textcolor{white}{\textbf{\small Sl.\ No.}} & \textcolor{white}{\textbf{\small Title of the Experiment}} & \textcolor{white}{\textbf{\small Date}} & \textcolor{white}{\textbf{\small Page No.}} & \textcolor{white}{\textbf{\small Signature}} \\
 \hline
 1A & NumPy Basics -- Student Marks Analysis & & 5 & \\[14pt] \hline
-1B & Pandas DataFrame -- Student Details & & 9 & \\[14pt] \hline
-2 & NumPy 2D Array -- Branch Sales Analysis & & 13 & \\[14pt] \hline
-3A & Simple Linear Regression -- Study Hours & & 17 & \\[14pt] \hline
-3B & Multiple Linear Regression -- House Price & & 21 & \\[14pt] \hline
-4A & Simple Linear Regression (Least Squares) & & 25 & \\[14pt] \hline
-4B & Simple Linear Regression (Gradient Descent) & & 29 & \\[14pt] \hline
-4C & Simple Linear Regression with Scikit-learn & & 35 & \\[14pt] \hline
+1B & Pandas DataFrame -- Student Details & & 11 & \\[14pt] \hline
+2 & NumPy 2D Array -- Branch Sales Analysis & & 17 & \\[14pt] \hline
+3A & Simple Linear Regression -- Study Hours & & 23 & \\[14pt] \hline
+3B & Multiple Linear Regression -- House Price & & 29 & \\[14pt] \hline
+4A & Simple Linear Regression (Least Squares) & & 35 & \\[14pt] \hline
+4B & Simple Linear Regression (Gradient Descent) & & 41 & \\[14pt] \hline
+4C & Simple Linear Regression with Scikit-learn & & 49 & \\[14pt] \hline
 9  &  &  &  &  \\[14pt] \hline
 10 &  &  &  &  \\[14pt] \hline
 11 &  &  &  &  \\[14pt] \hline
@@ -212,7 +212,7 @@ sub_avg = marks.mean(axis=0)
 print("Subject-wise average =", np.round(sub_avg, 2))
 \end{lstlisting}
 
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -230,6 +230,7 @@ Subject-wise average = [77.67 81.67 89.   82.67 79.67]
 \end{verbatim}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -339,7 +340,7 @@ df.to_csv("exp3_students.csv", index=False)
 print("\nSaved to exp3_students.csv")
 \end{lstlisting}
 
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -396,6 +397,7 @@ Saved to exp3_students.csv
 \end{verbatim}}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -534,7 +536,7 @@ plt.legend(); plt.tight_layout(); plt.savefig("exp4_scatter.png", dpi=150)
 print("saved exp4_sales.png exp4_pie.png exp4_line.png exp4_scatter.png")
 \end{lstlisting}
 
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -568,6 +570,7 @@ Highest sales: branch 3
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -687,7 +690,7 @@ plt.tight_layout()
 plt.savefig("exp5_fit.png", dpi=150)
 \end{lstlisting}
 
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -708,6 +711,7 @@ NE: MSE=0.1845 R2=0.9986
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -827,7 +831,7 @@ plt.tight_layout()
 plt.savefig("exp6_plane.png", dpi=150)
 \end{lstlisting}
 
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -845,6 +849,7 @@ Predicted price (Area 2.8, Age 4) = 36.03 lakhs
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -967,7 +972,7 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("exp4a_fit.png", dpi=150)
 \end{lstlisting}
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -987,6 +992,7 @@ LS: MSE=1.3236 R2=0.0167 RMSE=1.1505
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -1127,7 +1133,7 @@ plt.title("Gradient Descent: Cost vs Epochs")
 plt.tight_layout()
 plt.savefig("exp4b_cost.png", dpi=150)
 \end{lstlisting}
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -1148,6 +1154,7 @@ GD: MSE=1.3885 R2=-0.0315 RMSE=1.1784
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
@@ -1259,7 +1266,7 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("exp4c_fit.png", dpi=150)
 \end{lstlisting}
-\tooddpage
+\toevenpage
 \expheading{OUTPUT}
 \vspace{2pt}
 \noindent\rule{\textwidth}{0.5pt}\par
@@ -1279,6 +1286,7 @@ MSE=1.2923 R2=0.0138 RMSE=1.1368
 \end{center}
 \vspace{4pt}
 
+\tooddpage
 \expheading{RESULT}
 \vspace{4pt}
 {\fontsize{12}{15}\selectfont
