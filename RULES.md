@@ -10,10 +10,10 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - Footer (all pages): `DEPARTMENT OF CSE ... CAPE COLLEGE OF ENGINEERING ALAPPUZHA ... Page No. <n>`. Experiment header shows Date only (no Page No. blank at top).
 - Cover institution line: `CAPE COLLEGE OF ENGINEERING ALAPPUZHA`.
 - Cover details (Name … Faculty In-Charge, Signature/Date): centered block, fixed-width label column, vertically aligned colons and write-in lines.
-- Index table: header row dark-blue fill + white bold text; fill each experiment's title + date + page number. Dates: 1A+1B 7/7/26, 2 15/7/26, 3A+3B 22/7/26, 4A+4B+4C 14/08/26, 5+6 9/9/26. Same dates on sheet Date lines.
+- Index table: header row dark-blue fill + white bold text; fill each experiment's title + date + page number. Every date (index + sheet Date lines) uses d-m-yyyy with dashes and a 4-digit year. Own dates: 1A+1B 7-7-2026, 2 15-7-2026, 3A+3B 22-7-2026, 4A+4B+4C 14-8-2026, 5+6 9-9-2026; filled pic dates for 7-11 (see Dates bullet in Files).
 
 ## 2. Code rules (strict)
-- **No scikit-learn anywhere except Experiment 4C** (no `fetch_*`, no `train_test_split`, no metrics elsewhere). NumPy + stdlib only; `matplotlib` allowed for plots.
+- **No scikit-learn in exps 1A-4B except Experiment 4C** (no `fetch_*`, no `train_test_split`, no metrics elsewhere). NumPy + stdlib only; `matplotlib` allowed for plots. Exps 5-6 use the record's own code (sklearn allowed there); exps 7-11 follow the official procedure sheets (sklearn/keras as they require).
 - 4C exception: uses `fetch_california_housing` + `LinearRegression` (X=AveRooms, 80/20 `random_state=42`).
 - Data always comes from the **`housing.csv` file** (California Housing), never a library loader.
 - Experiment 1 fixed spec: X = TotalRooms, Y = MedHouseVal (in $100k), 80/20 split with seed 42, standardize with train mean/std.
@@ -51,7 +51,22 @@ Running rules for the PCCSL 507 Machine Learning lab record (LaTeX). Follow thes
 - `ML_Lab_Experiment5.tex` / `.pdf` — Experiment 5 (SLR hours vs score, predict at 9). `exp5_run.py`, `exp5_fit.png`.
 - `ML_Lab_Experiment6.tex` / `.pdf` — Experiment 6 (MLR area+age, 3D plane). `exp6_run.py`, `exp6_plane.png`.
 - `ML_Lab_Experiment7.tex` / `.pdf` — Experiment 7 (KNN Fashion MNIST, from-scratch NumPy). `exp7_run.py`, `exp7_acc.png`.
-- `OPWER.tex` / `.pdf` — joined record, big code font, PCCSL 508 header, code+output LEFT (10 exps: 1A,1B,2,3A,3B,4A,4B,4C,5,6). `exp5_knn_run.py`, `exp5_knn_acc.png`, `exp6_tree_run.py`, `exp6_tree.png`, `exp6_imp.png`.
+- `OPWER.tex` / `.pdf` — joined record, big code font, PCCSL 508 header, code+output LEFT (15 exps: 1A,1B,2,3A,3B,4A,4B,4C,5,6,7,8,9,10,11). Index pages verified with pdftotext.
+- Cover: emblem `cape_logo.jpg`, "Department of Computer Science and Engineering", filled (Name Goutham Sankar JL, Reg PRP24CS068, B.Tech, S5, 2026-2027, Faculty Ms. Sneha S, Ms. Deepa A B). Cover title says PCCSL 508.
+- Dates: exps 1A-6 keep the record's own dates (d-m-yyyy dashes, 4-digit year: 7-7-2026, 15-7-2026, 22-7-2026, 14-8-2026, 9-9-2026). Only where dates were missing, pic dates were filled into index AND sheet Date lines: 7/8 07-10-2026, 9/10 14-10-2026, 11 30-10-2026.
+- Exps 10 & 11 (user's pic titles): 10 "K-Means Clustering on Digits Dataset" (best K=15 by silhouette; `exp10_run.py`, `exp10_elbow.png`, `exp10_sil.png`), 11 "Multilayer Feed-Forward Neural Network (MLP) on Wine Quality Dataset using Keras" (`exp11_run.py`, `exp11_acc.png`). Program pages split A/B after `model.compile(...)` line.
+- `winequality-red.csv` — UCI red wine (1599 rows, sep=";"), exp11 dataset; `cape_logo.jpg` — CAPE emblem (copied from Projects/MOCHI/docs/emblem.jpg).
+- Keras runs on the torch backend (`os.environ["KERAS_BACKEND"]="torch"` before importing keras; system has torch 2.14, no TF). Installed into `.venv`: keras 3.15.1.
+- `mastercopy-1.pdf` (Downloads) — faculty master copy for exps 5-9. OPWER exps 7-9 follow it (titles/theory/procedures). Exps 5-6 stay the record's own versions (user choice on 24/10/26); exp 6 = tercile segmentation per customer RFM features.
+- Official procedure sheets: user's pic `Downloads/EXPERIMENT 7_5_14_11.pdf` (pdftotext before use). Content mapping to OPWER: PDF exp7 -> 7, exp5 (Ridge/Lasso) -> 8, exp6 (MLE/MAP) -> 9, exp14 (K-Means Digits) -> 10, exp11 (MLP Wine) -> 11. Procedures applied VERBATIM (7: numbered 7 steps; 8: numbered with Train sub-list; 9: prose lines + bullet sub-lines; 10: unnumbered 9 lines; 11: numbered 8 steps with sub-descriptions). Extraction artifacts cleaned: "XX and yy" -> "X and y", "K=2K=2 to K=15K=15" -> "K=2 to K=15". Official exp11 procedure says "Dense(1, softmax)" (their typo); real run + listing use Dense(6) (6 quality classes) — user approved keeping the sheet text verbatim.
+- `exp7_run.py` — Pima Indian Diabetes (diabetes.csv) Logistic Regression ± StandardScaler. `diabetes.csv` — Pima dataset (plotly mirror, 768x9).
+- `exp8_run.py` — OLS/Ridge/Lasso on sklearn diabetes; `exp8_pred.png`, `exp8_coef.png`.
+- `exp9_run.py` — Breast Cancer LR via MLE (C=inf), MAP L2, MAP L1 (saga, l1_ratio=1); no figures.
+- `exp5_knn_run.py`, `exp5_knn_acc.png`, `exp6_tree_run.py`, `exp6_tree.png`, `exp6_imp.png`.
+- `online_retail.zip` — UCI Online Retail, git-ignored, exp6 auto-downloads it. `.venv` — system-site venv with pandas/openpyxl (system python lacks them).
 - Pandas is allowed where the experiment needs DataFrames (Exp 3); ML model code stays NumPy-only.
+- exp11_run.py (official-procedure build): Dense(32, relu) / Dense(16, relu) / Dense(6, softmax), epochs=150, batch_size=100, stratified 80/20 (random_state=42), labels 3-8 -> 0-5. Real rerun output (verbatim in doc): Dataset (1599, 12), Missing values 0, Duplicates 240, Train 1279 Test 320, train acc 0.6935, test loss 0.9831, test acc 0.6281. `exp11_acc.png` regenerated from that run.
+- Sheet-fit (exps 9/10/11 each on one page): the sheet's `{...}` group holds `\makeatletter\let\vspace\@gobble\makeatother` + parskip/display-skip 0pt + merged short desc lines (9: Name+Source and Features+Target; 10: Name+Source; 11: Name+Source, plus the Description tail shortened — the label-shift info already lives in its Classes line). Exp 11 additionally gets `\fontsize{10}{11.4}\selectfont` in its group. Result: 103 pages, all 15 index rows == section starts (verified), parity audit clean on pages 5-103.
+- Listing audit (OPWER): all 20 lstlisting blocks byte-match their `.py` (15 exp slots; exps 2/6/8/11 are split into 2 blocks each). Mapping: 1A<-exp2_run.py, 1B<-exp3_run.py, 2<-exp4_run.py, 3A<-exp5_run.py, 3B<-exp6_run.py, 4A<-exp4a_run.py, 4B<-exp4b_run.py, 4C<-exp4c_run.py, 5<-exp5_knn_run.py, 6<-exp6_tree_run.py, 7-11<-expN_run.py; exp1_run.py belongs to ML_Lab_Experiment1 (not OPWER). exps 2/3A/3B code files (exp4/5/6_run.py) were trimmed to the doc listings (X-/Y-echo prints, "saved ..." prints, 1 blank line removed) and rerun — all three stdout byte-match the doc verbatim blocks.
 - `housing.csv` — California Housing data file. `RULES.md` — this file. `Exp4_Viva.md` — viva Q&A for Experiment 4.
 - Git commits: short and funny messages.

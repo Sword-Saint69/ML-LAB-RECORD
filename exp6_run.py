@@ -7,9 +7,6 @@ import matplotlib.pyplot as plt
 X1 = np.array([1.0, 1.5, 2.0, 2.5, 3.0, 3.5])
 X2 = np.array([10, 8, 6, 5, 3, 2], dtype=float)
 Y = np.array([20, 24, 29, 32, 38, 43], dtype=float)
-print("X1 =", X1.tolist())
-print("X2 =", X2.tolist())
-print("Y  =", Y.tolist())
 
 
 Xb = np.c_[np.ones(len(X1)), X1, X2]
@@ -44,4 +41,3 @@ ax.set_title("Multiple Linear Regression: Price vs Area and Age")
 ax.legend()
 plt.tight_layout()
 plt.savefig("exp6_plane.png", dpi=150)
-print("saved exp6_plane.png")

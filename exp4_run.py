@@ -30,7 +30,6 @@ print("Day-wise total =", sales.sum(axis=0))
 
 top = int(sales.sum(axis=1).argmax())
 print("Highest sales: branch", top + 1)
-
 x = np.arange(len(days))
 w = 0.25
 plt.figure(figsize=(7, 4.5))
@@ -56,4 +55,3 @@ plt.scatter(range(7), sales[1], s=40, label="Branch 2")
 plt.scatter(range(7), sales[2], s=40, label="Branch 3")
 plt.xlabel("Day index"); plt.ylabel("Sales"); plt.title("Daily Sales Scatter per Branch")
 plt.legend(); plt.tight_layout(); plt.savefig("exp4_scatter.png", dpi=150)
-print("saved exp4_sales.png exp4_pie.png exp4_line.png exp4_scatter.png")

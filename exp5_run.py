@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 
 X = np.array([1, 2, 3, 4, 5, 6, 7, 8], dtype=float)
 Y = np.array([45, 50, 54, 60, 65, 70, 74, 80], dtype=float)
-print("X =", X.tolist())
-print("Y =", Y.tolist())
 
 
 x_bar, y_bar = X.mean(), Y.mean()
@@ -43,4 +41,3 @@ plt.title("Simple Linear Regression: Study Hours vs Exam Score")
 plt.legend()
 plt.tight_layout()
 plt.savefig("exp5_fit.png", dpi=150)
-print("saved exp5_fit.png")
